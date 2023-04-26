@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ib_assistant_application/note_taking_page.dart';
 import 'package:ib_assistant_application/schedule_page.dart';
+import 'package:ib_assistant_application/settings_page.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 
 class MainPage extends StatefulWidget {
@@ -94,7 +95,12 @@ class _MainPageState extends State<MainPage> {
               ),
               ElevatedButton(
                 onPressed: () {
-                  // TODO: navigate to settings screen
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SettingsPage(),
+                    ),
+                  );
                 },
                 child: const Icon(Icons.settings),
               ),
