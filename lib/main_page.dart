@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ib_assistant_application/note_taking_page.dart';
+import 'package:ib_assistant_application/resource_page.dart';
 import 'package:ib_assistant_application/schedule_page.dart';
 import 'package:ib_assistant_application/settings_page.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
@@ -89,7 +90,12 @@ class _MainPageState extends State<MainPage> {
               ),
               ElevatedButton(
                 onPressed: () {
-                  // TODO: navigate to study resources screen
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ResourcesPage(),
+                    ),
+                  );
                 },
                 child: const Icon(Icons.book),
               ),
